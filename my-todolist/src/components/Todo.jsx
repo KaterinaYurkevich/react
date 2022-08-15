@@ -67,7 +67,8 @@ export default function Todo() {
     }
     
     function handleActiveTodo(id) {
-        let newTodos = todos.forEach((todo) => {
+        let newTodos = [...todos];
+        newTodos.map((todo) => {
             if (todo.id === id) {
                 todo.completed = !todo.completed;
             }
