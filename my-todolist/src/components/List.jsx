@@ -4,14 +4,14 @@ export default function List(props) {
     const { id, completed, title, deleteTodo, activeTodo } = props;
     const [activeState, setActiveState] = useState(completed);
 
-    function handleCheckedTodo() {
+    function handleCheckedTodo(id) {
         activeTodo(id);
         setActiveState(!activeState);
     }
 
     return (
         <li>
-            <span className={activeState ? 'checked' : ''} onClick={() => handleCheckedTodo()} >{`${id}. ${title}`}</span>
+            <span className={activeState ? 'checked' : ''} onClick={() => handleCheckedTodo(id)} >{`${id}. ${title}`}</span>
             <button className="todos_button" onClick={() => deleteTodo(id)}>Удалить</button>
         </li>
     )

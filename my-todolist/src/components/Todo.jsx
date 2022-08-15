@@ -67,12 +67,12 @@ export default function Todo() {
     }
     
     function handleActiveTodo(id) {
-        todos.forEach((todo) => {
-        if (todo.id === id) {
-            todo.completed = !todo.completed;
-          }
-          })
-          setFiltered(todos);
+        let newTodos = todos.forEach((todo) => {
+            if (todo.id === id) {
+                todo.completed = !todo.completed;
+            }
+        })
+        setFiltered(newTodos);
     }
 
     function handleFilterTodo(status) {
@@ -85,8 +85,8 @@ export default function Todo() {
     }
 
     return (
-      <div class="todo">
-      <h1 class="todo_header">Мои списки дел</h1>
+        <div class="todo">
+         <h1 class="todo_header">Мои списки дел</h1>
             <Input addTodo={addTodo} />
             <ul  class="todos">
                 {filtered.map(todo => <List key={todo.id} {...todo} deleteTodo={handleDeleteTodo} activeTodo={handleActiveTodo} />)}
