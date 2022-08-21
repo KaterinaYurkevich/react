@@ -1,0 +1,99 @@
+@import 'styles/variables.scss';
+@import "~bootstrap/scss/bootstrap";
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $lightpink;
+    color: $green;
+}
+
+header {
+    background: $dutypink;
+    color: $green;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin: auto;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.cards {
+    max-width: 300px;
+    background: $main;
+    margin: 5px 0;
+}
+
+.cards_body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards_box {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.cards_title {
+    margin-bottom: 10px;
+    min-height: 70px;
+}
+
+.cards_text {
+    flex: 1 1 auto;
+}
+
+.card-button {
+    display: inline-block;
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+
+.cards_header,
+.cards_footer {
+    background: $lightgreen;
+    color: $green;
+    vertical-align: middle;
+    min-height: 45px;
+}
+
+.cards_footer {
+    text-align: end;
+}
+
+footer {
+    background: $green;
+    color: $lightpink;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_contacts a {
+    text-decoration: none;
+    color: $lightpink;
+}
+
+.box-phone {
+    display: inline-block;
+    vertical-align: top;
+}
