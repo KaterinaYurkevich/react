@@ -9,7 +9,7 @@ export function Footer() {
         <div className='footer_contacts'>
           <p class="our-contacts-adress-email">E-mail:&nbsp; 
              <a href="mailto:wildvacation@gmail.com">wildvacation@gmail.com</a>
-         </p>
+          </p>
           <p class="our-contacts-adress-adress">Адрес:&nbsp;
             <span>Немига 5а, офис 18,  Минск</span>
           </p>

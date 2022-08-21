@@ -6,9 +6,8 @@ export function Card(props) {
   const imageSrc = Array.isArray(multimedia) && multimedia[1].url;
   const date = new Date(Date.parse(created_date));
   const year = date.getFullYear();
-  let month = date.getMonth() < 10 ? `0${date.getMonth()}` : `${date.getMonth()}`;
-  let day = date.getDate() < 10 ? `0${date.getDate()}` : `${date.getDate()}`;
-
+  const month = date.getMonth() < 10 ? `0${date.getMonth()}` : `${date.getMonth()}`;
+  const day = date.getDate() < 10 ? `0${date.getDate()}` : `${date.getDate()}`;
 
   const formatedDate = `${year}-${month}-${day}`;
  
